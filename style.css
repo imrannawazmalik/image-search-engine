@@ -1,0 +1,212 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f6e9d8;
+    color: #130230;
+}
+
+nav {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #130230;
+    color: #eeeeee;
+    text-align: center;
+}
+
+nav h1 {
+    font-size: 28px;
+}
+
+main {
+    width: 100%;
+    padding: 80px 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#inputBox {
+    flex: 1;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#inputBox::placeholder {
+    color: #777;
+}
+
+#btn {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #130230;
+    color: #eeeeee;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn:hover {
+    background-color: #1b0346;
+    transform: scale(1.05);
+}
+
+article {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+article h1 {
+    font-size: 24px;
+}
+
+footer {
+    width: 100%;
+    padding: 10px 20px 40px;
+}
+
+.images {
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.images div {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.images img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+/*For The  TABLET  */
+
+@media (max-width: 1000px) {
+
+    .images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .images img {
+        height: 280px;
+    }
+}
+
+/* For The  SMALL TABLET  */
+
+@media (max-width: 750px) {
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .images img {
+        height: 260px;
+    }
+
+    article h1 {
+        font-size: 21px;
+    }
+}
+
+/*Responsive for the Mobile */
+@media (max-width: 500px) {
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    nav h1 {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 45px 15px 15px;
+    }
+
+    form {
+        gap: 7px;
+    }
+
+    #inputBox {
+        font-size: 16px;
+        padding: 11px 12px;
+    }
+
+    #btn {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    article {
+        padding: 20px 15px;
+    }
+
+    article h1 {
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 10px 15px 30px;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .images img {
+        height: 300px;
+    }
+}
